@@ -1,4 +1,4 @@
-import './Cards'
+import './Cards.css'
 import Card from '../Card'
 function Cards(props) {
   function renderCards() {

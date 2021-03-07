@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding:0 100px;
+  justify-content: space-between;
+  align-content: center;
+  background-color: white;
+}
+
+.header-title {
+
+}
+
+.header-dark-mode {
+  align-self: center;
+}

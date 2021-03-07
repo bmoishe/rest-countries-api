@@ -15,10 +15,13 @@ function App() {
     <div className="App">
       {/* header */}
       <Header/>
+      <div className='app-navigation'>
+
       {/* search bar */}
       <SearchBar/>
       {/* filter */}
       <Filter/>
+      </div>
       {/* Cards - Array of Cards */}
       <Cards countries={countries}/>
     </div>

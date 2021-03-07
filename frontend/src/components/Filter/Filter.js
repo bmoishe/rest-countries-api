@@ -1,4 +1,4 @@
-import './Filter'
+import './Filter.css'
 
 function Filter() {
   return (

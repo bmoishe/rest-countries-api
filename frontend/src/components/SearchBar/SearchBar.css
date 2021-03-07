@@ -1,0 +1,7 @@
+.searchBar {
+  display: flex;
+  flex-direction: row;
+}
+.searchBar > img {
+  margin-right: 10px;
+}
