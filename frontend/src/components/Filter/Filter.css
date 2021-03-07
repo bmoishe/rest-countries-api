@@ -1,3 +1,11 @@
 .filter {
+  border-radius: 7px;
+  padding: 17px 70px;
+  background-color: white;
+}
 
+@media only screen and (max-width: 802px) {
+  .filter {
+    margin-top:35px;
+  }
 }

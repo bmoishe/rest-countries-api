@@ -1,7 +1,29 @@
 .searchBar {
   display: flex;
   flex-direction: row;
+  background-color:white;
+  border-radius: 7px;
+  width: 400px;
 }
 .searchBar > img {
   margin-right: 10px;
+}
+.searchBar > input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: white;
+  padding: 17px 0px 17px 10px;
+  width:200px;
+  border-radius: 7px;
+}
+.searchBar > input:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 533px) {
+  .searchBar {
+    width:150px;
+  }
 }

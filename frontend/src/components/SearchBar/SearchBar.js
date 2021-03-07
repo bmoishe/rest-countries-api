@@ -4,7 +4,7 @@ function SearchBar() {
   return (
     <div className="searchBar">
       <img src="" alt="search"/>
-      <div>Search for a country</div>
+      <input placeholder='Search for a country...'/>
     </div>
   );
 }

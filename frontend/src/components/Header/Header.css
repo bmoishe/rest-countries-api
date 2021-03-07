@@ -8,9 +8,21 @@
 }
 
 .header-title {
-
+  align-self: center;
 }
 
 .header-dark-mode {
   align-self: center;
+}
+
+@media only screen and (max-width: 533px) {
+  .header {
+    padding:0 20px;
+  }
+  .header-title {
+    font-size: 14px;
+  }
+  .header-dark-mode {
+    font-size: 12px;
+  }
 }
