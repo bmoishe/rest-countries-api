@@ -1,24 +1,53 @@
+import {useEffect, useState } from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import Filter from './components/Filter'
 import Card from './components/Card'
 import './App.css';
-const countries = [
-  'country',
-  'country2',
-  'country3',
-  'country4',
-  'country5',
-  'country6',
-  'country7',
-  'country8',
-]
+
 function App() {
+  const [countries, setCountries] = useState([])
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [error, setError] = useState('')
+
+  function fetchCountries() {
+    if(!isLoaded) {
+      setIsLoaded(false);
+      console.log('sending request')
+      fetch(`https://restcountries.eu/rest/v2/all`)
+        .then(res => res.json())
+        .then(
+          (data) => {
+            setCountries(data);
+            setIsLoaded(true);
+          },
+            (err) => {
+              setIsLoaded(true);
+              setError(err);
+            }
+          )
+  }
+}
+
+
+useEffect(() => {
+  fetchCountries()
+  return () => {
+    console.log('error')
+  }
+}, [])
+
+  
+
   function renderCards() {
+    if(!isLoaded){
+      return <div className='app-cards-loading'>Loading</div>
+    }
     return countries.map( (country, index) => {
       return <div key={index}><Card country={country}/></div>
     })
   }
+
   return (
     <div className="App">
       {/* header */}
