@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 
 import './SearchBar.css'
 
@@ -8,7 +8,7 @@ function SearchBar(props) {
     setRequestedCountry(e.target.value)
   }
 
-  function handleRequest(params) {
+  function handleRequest() {
     fetchCountry()
     console.log('changed')
   }

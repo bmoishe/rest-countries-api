@@ -27,26 +27,39 @@ function Country(props) {
 
     function renderBorderNations() {
       return props.country.borders.map((bCountry, index) => {
-        return <div key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</div>
+        return <div className="country-borderNation"key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</div>
       })
     }
+    console.log(props.country)
     
     return (
-      <div className="card">
-        <div onClick={() => props.setSelectedCountry(null)}>Back</div>
-        {renderBorderNations()}
-        <div className="card-top">
-          <img src={props.country.flag} alt={props.country.name}/>
-        </div>
-        <div className="card-bottom">
-          <h2 className='card-title'>{props.country.name}</h2>
-          <div>
-              <div><span className='card-attribute'>Population: </span><span className='card-attribute-value'>{props.country.population}</span></div>
-              <div><span className='card-attribute'>Region: </span><span className='card-attribute-value'>{props.country.region}</span></div>
-              <div><span className='card-attribute'>Capital: </span><span className='card-attribute-value'>{props.country.capital}</span></div>
+      <div className="country">
+        <div className="country-backBtn" onClick={() => props.setSelectedCountry(null)}>Back</div>
+        <div className="country-content">
+          <div className="country-left">
+            <img className="country-image" src={props.country.flag} alt={props.country.name}/>
+          </div>
+          <div className="country-right">
+            <h2 className='country-title'>{props.country.name}</h2>
+            <div className='country-details-container'>
+
+            
+            <div className="country-details">
+                <p><span className='country-attribute'>Native Name: </span><span className='country-attribute-value'>{props.country.nativeName}</span></p>
+                <p><span className='country-attribute'>Population: </span><span className='country-attribute-value'>{props.country.population}</span></p>
+                <p><span className='country-attribute'>Region: </span><span className='country-attribute-value'>{props.country.region}</span></p>
+                <p><span className='country-attribute'>Sub Region: </span><span className='country-attribute-value'>{props.country.subregion}</span></p>
+                <p><span className='country-attribute'>Capital: </span><span className='country-attribute-value'>{props.country.capital}</span></p>
+            </div>
+            <div className="country-details">
+            <p><span className='country-attribute'>Top Level Domain: </span><span className='country-attribute-value'>{props.country.topLevelDomain[0]}</span></p>
+                <p><span className='country-attribute'>Currencies: </span><span className='country-attribute-value'>{props.country.currencies[0].name}</span></p>
+                <p><span className='country-attribute'>languages: </span><span className='country-attribute-value'>{props.country.languages[0].name}</span></p>
+            </div>
+            </div>
+            <div className="country-borderNations"><span className='country-attribute'>Border Countries: </span>{renderBorderNations()}</div>
           </div>
         </div>
-        
       </div>
     );
 }

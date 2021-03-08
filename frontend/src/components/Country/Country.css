@@ -1,30 +1,65 @@
-.card {
-  margin:35px;
-  border-radius: 7px;
-  background-color: white;
-  width:240px;
-  min-height: 350px;
+.country {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-left: 70px;
 }
 
-.card-top {
-  height: 100%;
+.country-backBtn {
+  padding: 10px;
+  border:solid  1px lightgray;
+  width: 100px;
+  text-align: center;
+  background-color:white;
 }
 
-.card-top > img {
-  width: 100%;
+.country-content {
+  display: flex;
+  flex-direction: row;
+  margin:70px 70px 0 0;
 }
 
-.card-bottom {
-  padding: 15px 0px 15px 15px;
-}
-.card-bottom > h2 {
-  margin-top: 0px;
+@media only screen and (max-width: 533px) {
+  .country-content {
+    flex-direction: column;
+  }
 }
 
-.card-attribute {
+.country-left {
+ margin-right: 70px;
+}
+
+.country-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-image {
+  width: 500px;
+}
+.country-attribute {
   font-weight: 600;
+  align-self: center;
 }
 
-.card-value {
+.country-details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.country-borderNations {
+  margin-top:35px;
+  display: flex;
+}
+
+.country-borderNation {
+  padding: 10px;
+  border:solid  1px lightgray;
+  margin:5px;
+  background-color:white;
+  align-self: center;
+}
+
+.country-value {
 
 }
