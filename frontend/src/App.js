@@ -3,12 +3,13 @@ import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import Filter from './components/Filter'
 import Card from './components/Card'
+import Country from './components/Country'
 import './App.css';
 
 function App() {
   const [countries, setCountries] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
-  const [requestedCountry, setRequestedCountry] = useState([''])
+  const [selectedCountry, setSelectedCountry] = useState(null)
   const [error, setError] = useState('')
 
   function fetchCountries() {
@@ -45,26 +46,35 @@ useEffect(() => {
       return <div className='app-cards-loading'>Loading</div>
     }
     return countries.map( (country, index) => {
-      return <div key={index}><Card country={country}/></div>
+      return <div key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>
     })
   }
+  console.log(selectedCountry)
 
   return (
     <div className="App">
       {/* header */}
       <Header/>
-      <div className='app-navigation'>
+      {
+        selectedCountry ?
+        <div className='app-contry-view'>
+          <Country setIsLoaded={setIsLoaded} setError={setError} setSelectedCountry={setSelectedCountry} country={selectedCountry}/>
+        </div>:
+     
 
-      {/* search bar */}
-      <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
-      {/* filter */}
-      <Filter/>
+      <div className='app-selection-view'>
+        <div className='app-navigation'>
+          {/* search bar */}
+          <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
+          {/* filter */}
+          <Filter/>
+        </div>
+        {/* Cards - Array of Cards */}
+        <div className='app-cards'>
+          {renderCards()}
+        </div>
       </div>
-      {/* Cards - Array of Cards */}
-      <div className='app-cards'>
-      {renderCards()}
-      </div>
-      {/* <Card countries={countries}/> */}
+       }
     </div>
   );
 }

@@ -2,7 +2,7 @@ import './Card.css'
 
 function Card(props) {
     return (
-      <div className="card">
+      <div className="card" onClick={() => props.setSelectedCountry(props.country)}>
         <div className="card-top">
           <img src={props.country.flag} alt={props.country.name}/>
         </div>

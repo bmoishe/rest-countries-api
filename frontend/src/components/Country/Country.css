@@ -1,0 +1,30 @@
+.card {
+  margin:35px;
+  border-radius: 7px;
+  background-color: white;
+  width:240px;
+  min-height: 350px;
+}
+
+.card-top {
+  height: 100%;
+}
+
+.card-top > img {
+  width: 100%;
+}
+
+.card-bottom {
+  padding: 15px 0px 15px 15px;
+}
+.card-bottom > h2 {
+  margin-top: 0px;
+}
+
+.card-attribute {
+  font-weight: 600;
+}
+
+.card-value {
+
+}

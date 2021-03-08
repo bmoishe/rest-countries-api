@@ -14,10 +14,6 @@ function SearchBar(props) {
   }
 
   function fetchCountry() {
-    console.log(`props.isLoaded:${props.isLoaded}
-    fetch
-    
-    `)
     props.setIsLoaded(false);
     console.log('sending request')
     fetch(`https://restcountries.eu/rest/v2/name/${requestedCountry}`)
