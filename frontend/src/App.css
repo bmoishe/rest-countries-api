@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.app-error {
+  color: red;
+}
+
 @media only screen and (max-width: 533px) {
   .app-navigation {
     margin: 20px 20px 0;

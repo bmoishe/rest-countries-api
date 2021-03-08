@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   const [countries, setCountries] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
+  const [requestedCountry, setRequestedCountry] = useState([''])
   const [error, setError] = useState('')
 
   function fetchCountries() {
@@ -55,7 +56,7 @@ useEffect(() => {
       <div className='app-navigation'>
 
       {/* search bar */}
-      <SearchBar/>
+      <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
       {/* filter */}
       <Filter/>
       </div>

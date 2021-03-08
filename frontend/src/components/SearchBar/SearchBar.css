@@ -22,6 +22,11 @@
   outline: none;
 }
 
+.searchBar-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (max-width: 533px) {
   .searchBar {
     width:150px;
