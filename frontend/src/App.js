@@ -28,8 +28,8 @@ function App() {
               setError(err);
             }
           )
+    }
   }
-}
 
 
 useEffect(() => {
@@ -67,7 +67,7 @@ useEffect(() => {
           {/* search bar */}
           <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
           {/* filter */}
-          <Filter/>
+          <Filter isLoaded={isLoaded} setIsLoaded={setIsLoaded} setError={setError} setCountries={setCountries}/>
         </div>
         {/* Cards - Array of Cards */}
         <div className='app-cards'>
