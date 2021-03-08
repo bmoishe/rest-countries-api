@@ -1,5 +1,5 @@
 import './Country.css'
-
+import arrow from '../../images/arrow-back-outline.svg'
 function Country(props) {
 
     function getBorderCountry(bCountry) {
@@ -34,7 +34,7 @@ function Country(props) {
     
     return (
       <div className="country">
-        <div className="country-backBtn" onClick={() => props.setSelectedCountry(null)}>Back</div>
+        <div className="country-backBtn" onClick={() => props.setSelectedCountry(null)}><img alt='arrow' src={arrow}/>Back</div>
         <div className="country-content">
           <div className="country-left">
             <img className="country-image" src={props.country.flag} alt={props.country.name}/>
