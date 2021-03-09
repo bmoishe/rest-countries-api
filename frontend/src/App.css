@@ -1,14 +1,14 @@
 body {
-  background-color: #f7f6f4;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .App {
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #f7f6f4;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .app-navigation {
-  margin: 20px 100px 0;
+  margin: 50px 100px 20px 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

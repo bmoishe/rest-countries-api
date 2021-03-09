@@ -4,7 +4,8 @@
   padding:0 100px;
   justify-content: space-between;
   align-content: center;
-  background-color: white;
+  background-color:  hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
 }
 
 .header-title {
@@ -13,6 +14,16 @@
 
 .header-dark-mode {
   align-self: center;
+  display: flex;
+}
+.header-dark-mode >span {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.header-dark-mode-img {
+  width: 17px;
+  height: 17px;
 }
 
 @media only screen and (max-width: 533px) {

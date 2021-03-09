@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import search from '../../images/search-outline.svg'
 import './SearchBar.css'
 
 function SearchBar(props) {
@@ -45,7 +45,7 @@ function SearchBar(props) {
     <div className="searchBar-container">
 
     <div className="searchBar">
-      <img onClick={handleRequest} src="" alt="search"/>
+      <img onClick={handleRequest} src={search} alt="search"/>
       <input onChange={(e) => handleChange(e)}placeholder='Search for a country...'/>
       
     </div>

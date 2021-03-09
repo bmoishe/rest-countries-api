@@ -7,10 +7,20 @@
 
 .country-backBtn {
   padding: 10px;
-  border:solid  1px lightgray;
-  width: 100px;
+  width: 90px;
   text-align: center;
-  background-color:white;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+}
+
+.country-backBtn > img{
+  width:17px;
+  align-self: center;
+  justify-self: center;
+  margin-right: 4px;
 }
 
 .country-content {
@@ -54,10 +64,12 @@
 
 .country-borderNation {
   padding: 10px;
-  border:solid  1px lightgray;
+  border: solid  1px hsl(0, 0%, 98%);
   margin:5px;
-  background-color:white;
+  background-color: hsl(0, 0%, 100%);
   align-self: center;
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
 }
 
 .country-value {

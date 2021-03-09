@@ -1,9 +1,10 @@
 .card {
   margin:35px;
   border-radius: 7px;
-  background-color: white;
+  background-color:  hsl(0, 0%, 100%);
   width:240px;
   min-height: 350px;
+  box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
 }
 
 .card-top {

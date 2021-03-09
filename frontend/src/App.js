@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar'
 import Filter from './components/Filter'
 import Card from './components/Card'
 import Country from './components/Country'
+import LoadingSpinner from './components/LoadingSpinner'
 import './App.css';
 
 function App() {
@@ -42,7 +43,7 @@ useEffect(() => {
 
   function renderCards() {
     if(!isLoaded){
-      return <div className='app-cards-loading'>Loading</div>
+      return <div className='app-cards-loading'><LoadingSpinner/></div>
     }
     return countries.map( (country, index) => {
       return <div key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>

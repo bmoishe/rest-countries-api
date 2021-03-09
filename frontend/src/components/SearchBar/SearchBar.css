@@ -1,19 +1,23 @@
 .searchBar {
   display: flex;
   flex-direction: row;
-  background-color:white;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 7px;
   width: 400px;
+  box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
 }
 .searchBar > img {
-  margin-right: 10px;
+  margin: 0 10px 0 20px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
 }
 .searchBar > input {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
-  background-color: white;
+  background-color:  hsl(0, 0%, 100%);
   padding: 17px 0px 17px 10px;
   width:200px;
   border-radius: 7px;
