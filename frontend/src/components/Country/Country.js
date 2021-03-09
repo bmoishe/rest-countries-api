@@ -27,14 +27,14 @@ function Country(props) {
 
     function renderBorderNations() {
       return props.country.borders.map((bCountry, index) => {
-        return <div className="country-borderNation"key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</div>
+        return <button className="country-borderNation"key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</button>
       })
     }
     console.log(props.country)
     
     return (
       <div className="country">
-        <div className="country-backBtn" onClick={() => props.setSelectedCountry(null)}><img alt='arrow' src={arrow}/>Back</div>
+        <button className="country-backBtn" onClick={() => props.setSelectedCountry(null)}><img alt='arrow' src={arrow}/>Back</button>
         <div className="country-content">
           <div className="country-left">
             <img className="country-image" src={props.country.flag} alt={props.country.name}/>

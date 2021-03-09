@@ -6,7 +6,15 @@
   width: 400px;
   box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
 }
-.searchBar > img {
+
+.searchBar-button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  }
+
+.searchBar-button > img {
   margin: 0 10px 0 20px;
   height: 20px;
   align-self: center;

@@ -1,4 +1,7 @@
 import './Filter.css'
+import {setState} from 'react'
+
+import chevronDown from '../../images/chevron-down-outline.svg'
 
 function Filter(props) {
   function fetchCountries(region) {
@@ -21,14 +24,20 @@ function Filter(props) {
   function handleClick(e) {
     fetchCountries(e.target.innerHTML)
   }
+
   return (
     <div className="filter">
-      <div>Filter By Region</div>
-      <div onClick={(e) => handleClick(e)}>Africa</div>
-      <div onClick={(e) => handleClick(e)}>Americas</div>
-      <div onClick={(e) => handleClick(e)}>Asia</div>
-      <div onClick={(e) => handleClick(e)}>Europe</div>
-      <div onClick={(e) => handleClick(e)}>Oceania</div>
+       {/* <option className='filter-button'></option> */}
+      <div className='filter-cta'>
+        <button className={`filter-button`} >Filter By Region <img alt='chevron-down' src={chevronDown}/></button>
+      </div>
+      <div className='filter-content'>
+        <button className='filter-options'  onClick={(e) => handleClick(e)}>Africa</button>
+        <button className='filter-options'  onClick={(e) => handleClick(e)}>Americas</button>
+        <button  className='filter-options' onClick={(e) => handleClick(e)}>Asia</button>
+        <button className='filter-options'  onClick={(e) => handleClick(e)}>Europe</button>
+        <button className='filter-options'  onClick={(e) => handleClick(e)}>Oceania</button>
+      </div>
     </div>
   );
 }

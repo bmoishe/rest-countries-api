@@ -46,7 +46,7 @@ useEffect(() => {
       return <div className='app-cards-loading'><LoadingSpinner/></div>
     }
     return countries.map( (country, index) => {
-      return <div key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>
+      return <div className='app-card' key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>
     })
   }
   console.log(selectedCountry)
@@ -60,11 +60,9 @@ useEffect(() => {
         <div className='app-contry-view'>
           <Country setIsLoaded={setIsLoaded} setError={setError} setSelectedCountry={setSelectedCountry} country={selectedCountry}/>
         </div>:
-     
-
       <div className='app-selection-view'>
         <div className='app-navigation'>
-          {/* search bar */}
+          {/* Search bar */}
           <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
           {/* filter */}
           <Filter isLoaded={isLoaded} setIsLoaded={setIsLoaded} setError={setError} setCountries={setCountries}/>

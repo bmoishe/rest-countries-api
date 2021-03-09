@@ -5,6 +5,9 @@
   width:240px;
   min-height: 350px;
   box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
+  border: 0px solid transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
 }
 
 .card-top {

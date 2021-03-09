@@ -41,11 +41,16 @@ function SearchBar(props) {
     }
   }
 
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      handleRequest()
+    }
+  }
   return (
     <div className="searchBar-container">
 
     <div className="searchBar">
-      <img onClick={handleRequest} src={search} alt="search"/>
+      <button className='searchBar-button' onKeyDown={handleKeyDown}><img onClick={handleRequest} src={search} alt="search"/></button>
       <input onChange={(e) => handleChange(e)}placeholder='Search for a country...'/>
       
     </div>
