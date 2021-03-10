@@ -1,9 +1,11 @@
 import './Filter.css'
-import {setState} from 'react'
+import { useState } from 'react'
 
 import chevronDown from '../../images/chevron-down-outline.svg'
 
 function Filter(props) {
+
+  const [showContent, setShowContent] = useState(false)
   function fetchCountries(region) {
       props.setIsLoaded(false);
       console.log('sending request')
@@ -25,13 +27,20 @@ function Filter(props) {
     fetchCountries(e.target.innerHTML)
   }
 
+  function showDropdown() {
+    if(!showContent) {
+      setShowContent(true)
+    } else {
+      setShowContent(false) 
+    }
+  }
+
   return (
     <div className="filter">
-       {/* <option className='filter-button'></option> */}
-      <div className='filter-cta'>
+      <div className='filter-cta' onClick={() => showDropdown()} >
         <button className={`filter-button`} >Filter By Region <img alt='chevron-down' src={chevronDown}/></button>
       </div>
-      <div className='filter-content'>
+      <div className={`filter-content ${showContent ?'filter-content-show' :''}`}>
         <button className='filter-options'  onClick={(e) => handleClick(e)}>Africa</button>
         <button className='filter-options'  onClick={(e) => handleClick(e)}>Americas</button>
         <button  className='filter-options' onClick={(e) => handleClick(e)}>Asia</button>

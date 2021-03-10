@@ -1,7 +1,4 @@
 .filter {
-  /* border-radius: 7px;
-  padding: 17px 70px; */
-  /* background-color:  hsl(0, 0%, 100%); */
   display: flex;
   flex-direction: column;
 }
@@ -31,8 +28,6 @@
     margin-left: 25px;
   }
 
-
-
   .filter-options {
     margin-bottom: 4px;
     background: transparent;
@@ -51,18 +46,6 @@
     display: none;
   }
 
-  .filter:hover .filter-content {
-    border-radius: 7px;
-    padding: 17px 25px;
-    box-shadow: 1px 1px 1px hsl(0, 0%, 90%);
-    background-color:  hsl(0, 0%, 100%);
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-
   .filter-content-show {
     border-radius: 7px;
     padding: 17px 25px;
@@ -72,10 +55,56 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: absolute;
+    top: 200px;
+    width: 125px;
   }
 
 @media only screen and (max-width: 802px) {
   .filter {
     margin-top:35px;
+  }
+  .filter-content-show {
+    top: 320px;
+  }
+}
+
+@media only screen and (max-width: 801px) {
+  .filter-content-show {
+    top: 280px;
+  }
+}
+
+@media only screen and (max-width: 612px) {
+  .filter-content-show {
+    top: 320px;
+  }
+}
+
+@media only screen and (max-width: 533px) {
+  .filter {
+    margin-top:0px;
+  }
+
+  .filter-content-show {
+    top: 120px;
+  }
+}
+
+@media only screen and (max-width: 533px) {
+  .filter {
+    margin-top:60px;
+  }
+  .filter-content-show {
+    top: 180px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .filter {
+    margin-top:15px;
+  }
+  .filter-content-show {
+    top: 180px;
   }
 }
