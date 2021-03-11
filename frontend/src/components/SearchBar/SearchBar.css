@@ -12,6 +12,7 @@
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
   text-shadow: 0px 0px 0px transparent;
+  border-radius: 7px;
   }
 
 .searchBar-button > img {
@@ -43,4 +44,16 @@
   .searchBar {
     width:150px;
   }
+}
+
+.dark-mode-theme-component .searchBar {
+  background-color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 1px hsl(200, 15%, 8%);
+}
+.dark-mode-theme-component > button{
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode-theme-component > input::placeholder{
+  color: hsl(0, 0%, 100%);
 }

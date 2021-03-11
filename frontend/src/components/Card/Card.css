@@ -35,3 +35,9 @@
   font-weight: 200;
   font-size: 14px;
 }
+
+.dark-mode-theme-component {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 1px hsl(200, 15%, 8%);
+}

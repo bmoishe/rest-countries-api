@@ -37,10 +37,10 @@ function Filter(props) {
 
   return (
     <div className="filter">
-      <div className='filter-cta' onClick={() => showDropdown()} >
+      <div className={`filter-cta ${props.isDarkMode && "dark-mode-theme-component"}`} onClick={() => showDropdown()} >
         <button className={`filter-button`} >Filter By Region <img alt='chevron-down' src={chevronDown}/></button>
       </div>
-      <div className={`filter-content ${showContent ?'filter-content-show' :''}`}>
+      <div className={`filter-content ${showContent ?'filter-content-show' :''} ${props.isDarkMode && "dark-mode-theme-component"}`}>
         <button className='filter-options'  onClick={(e) => handleClick(e)}>Africa</button>
         <button className='filter-options'  onClick={(e) => handleClick(e)}>Americas</button>
         <button  className='filter-options' onClick={(e) => handleClick(e)}>Asia</button>

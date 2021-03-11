@@ -49,7 +49,7 @@ function SearchBar(props) {
   return (
     <div className="searchBar-container">
 
-    <div className="searchBar">
+    <div className={`searchBar ${props.isDarkMode && "dark-mode-theme-component"}`}>
       <button className='searchBar-button' onKeyDown={handleKeyDown}><img onClick={handleRequest} src={search} alt="search"/></button>
       <input onChange={(e) => handleChange(e)}placeholder='Search for a country...'/>
       

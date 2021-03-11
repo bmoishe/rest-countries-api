@@ -47,28 +47,23 @@ useEffect(() => {
       return <div className='app-cards-loading'><LoadingSpinner/></div>
     }
     return countries.map( (country, index) => {
-      return <div className='app-card' key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>
+      return <div className='app-card' key={index}><Card isDarkMode={isDarkMode} setSelectedCountry={setSelectedCountry} country={country}/></div>
     })
   }
-  console.log(isDarkMode)
 
   return (
-    <div className="App">
-      {/* header */}
+    <div className={`App ${isDarkMode && "dark-mode-theme"}`}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       {
         selectedCountry ?
         <div className='app-contry-view'>
-          <Country setIsLoaded={setIsLoaded} setError={setError} setSelectedCountry={setSelectedCountry} country={selectedCountry}/>
+          <Country isDarkMode={isDarkMode} setIsLoaded={setIsLoaded} setError={setError} setSelectedCountry={setSelectedCountry} country={selectedCountry}/>
         </div>:
       <div className='app-selection-view'>
         <div className='app-navigation'>
-          {/* Search bar */}
-          <SearchBar isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
-          {/* filter */}
-          <Filter isLoaded={isLoaded} setIsLoaded={setIsLoaded} setError={setError} setCountries={setCountries}/>
+          <SearchBar isDarkMode={isDarkMode} isLoaded={isLoaded} setIsLoaded={setIsLoaded} error={error} setError={setError} setCountries={setCountries}/>
+          <Filter isDarkMode={isDarkMode} isLoaded={isLoaded} setIsLoaded={setIsLoaded} setError={setError} setCountries={setCountries}/>
         </div>
-        {/* Cards - Array of Cards */}
         <div className='app-cards'>
           {renderCards()}
         </div>

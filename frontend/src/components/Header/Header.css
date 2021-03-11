@@ -1,3 +1,4 @@
+
 .header {
   display: flex;
   flex-direction: row;
@@ -42,4 +43,10 @@
   .header-dark-mode {
     font-size: 12px;
   }
+}
+
+.dark-mode-theme-component {
+  background-color: hsl(209, 23%, 22%);
+  color:hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 1px hsl(200, 15%, 8%);
 }

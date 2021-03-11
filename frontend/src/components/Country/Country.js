@@ -27,14 +27,13 @@ function Country(props) {
 
     function renderBorderNations() {
       return props.country.borders.map((bCountry, index) => {
-        return <button className="country-borderNation"key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</button>
+        return <button className={`country-borderNation  ${props.isDarkMode && "dark-mode-theme-component"}`} key={index} onClick={() => getBorderCountry(bCountry)}>{bCountry}</button>
       })
     }
-    console.log(props.country)
     
     return (
-      <div className="country">
-        <button className="country-backBtn" onClick={() => props.setSelectedCountry(null)}><img alt='arrow' src={arrow}/>Back</button>
+      <div className={`country ${props.isDarkMode && "dark-mode-theme"}`}>
+        <button className={`country-backBtn ${props.isDarkMode && "dark-mode-theme-component"}`} onClick={() => props.setSelectedCountry(null)}><img alt='arrow' src={arrow}/>Back</button>
         <div className="country-content">
           <div className="country-left">
             <img className="country-image" src={props.country.flag} alt={props.country.name}/>

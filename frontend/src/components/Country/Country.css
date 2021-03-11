@@ -3,6 +3,7 @@
   flex-direction: column;
   margin-top: 70px;
   margin-left: 70px;
+  height: 100vh;
 }
 
 .country-backBtn {
@@ -78,4 +79,15 @@
 
 .country-value {
 
+}
+
+.dark-mode-theme {
+  background-color: hsl(200, 15%, 8%);
+  color:hsl(0, 0%, 100%);
+}
+
+.dark-mode-theme-component {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 1px hsl(200, 15%, 8%);
 }

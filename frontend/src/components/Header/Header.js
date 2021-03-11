@@ -9,7 +9,7 @@ function Header(props) {
     }
   }
   return (
-    <header className="header">
+    <header className={`header ${props.isDarkMode && "dark-mode-theme-component"}`}>
       <h1 className='header-title'>Where in the world?</h1>
       <button className='header-dark-mode' onClick={() => handleClick()}><img className='header-dark-mode-img' src={moonImg} alt='dark mode'/><span>Dark mode</span></button>
     </header>

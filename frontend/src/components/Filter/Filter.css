@@ -108,3 +108,12 @@
     top: 180px;
   }
 }
+
+.dark-mode-theme-component {
+  background-color: hsl(207, 26%, 17%);
+  box-shadow: 1px 1px 1px hsl(200, 15%, 8%);
+}
+.dark-mode-theme-component > input{
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
