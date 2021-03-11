@@ -12,6 +12,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCountry, setSelectedCountry] = useState(null)
   const [error, setError] = useState('')
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   function fetchCountries() {
     if(!isLoaded) {
@@ -35,7 +36,7 @@ function App() {
 useEffect(() => {
   fetchCountries()
   return () => {
-    console.log('error')
+    console.log('countries fetched')
   }
 }, [])
 
@@ -49,12 +50,12 @@ useEffect(() => {
       return <div className='app-card' key={index}><Card setSelectedCountry={setSelectedCountry} country={country}/></div>
     })
   }
-  console.log(selectedCountry)
+  console.log(isDarkMode)
 
   return (
     <div className="App">
       {/* header */}
-      <Header/>
+      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       {
         selectedCountry ?
         <div className='app-contry-view'>
